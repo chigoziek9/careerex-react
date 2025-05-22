@@ -11,12 +11,12 @@ function RandomUser() {
       });
   }, []);
 
-  if (!user) return <p>Loading...</p>;
+  if (!user) return <p class="flex justify-center items-center h-screen text-4xl font-bold ">Loading...</p>;
 
   return (
     <div class="flex justify-center items-center h-screen bg-gray-100">
       <img src={user.picture.large} alt="User" />
-      <ul>
+      <ul class="ml-4 text-xl">
         <li>NAME: {user.name.first} {user.name.last} </li>
         <li>CITY: {user.location?.city && `, ${user.location.city}`} </li>
         <li>EMAIL: {user.email}</li>
